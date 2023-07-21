@@ -44,15 +44,12 @@ void main() {
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.red,
                 ),
-              child: Container(
-                width: 100,
-                child: Row(
+              child: Row(
                   children: [
                     Icon(Icons.g_translate_rounded),
                     const Text('Continue with Google'),
                   ],
                 ),
-              ),
             ),
               TextButton(
                 onPressed: () {},
