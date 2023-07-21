@@ -4,7 +4,7 @@ void main() {
   runApp(MaterialApp(
       home: Scaffold(
           appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(80.0),
+            preferredSize: const Size.fromHeight(50),
             child: FilledButton(
               onPressed: () {},
               child: const Text('Skip'),
@@ -17,6 +17,13 @@ void main() {
           ),
           body: Center(
             child: Column(children: [
+            Container(
+              height: 150,
+              width: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(75),
+                color: Colors.blue[100], 
+              ),), 
             TextButton(
               onPressed: () {},
               child: Container(
