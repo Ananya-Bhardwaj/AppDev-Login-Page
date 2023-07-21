@@ -19,7 +19,11 @@ void main() {
             child: Column(children: [
             TextButton(
               onPressed: () {},
-              child: const Text('Continue with Email'),
+              child: Container(
+                width: 300,
+                child: const Text('Continue with Email'), 
+                alignment: Alignment.center,
+              ),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green[600],
@@ -28,6 +32,7 @@ void main() {
             TextButton(
               onPressed: () {},
               child: Container(
+                width: 300,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -47,14 +52,16 @@ void main() {
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFF4285F4),
                 ),
-              child: Row(
+              child: Container(
+                width: 300,
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
                   children: [
                     const Icon(Icons.g_translate_rounded),
                     const Text('Continue with Google'),
                   ],
                 ),
+              )
             ),
               TextButton(
                 onPressed: () {},
@@ -62,13 +69,16 @@ void main() {
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFF1877F2),
                 ),
-                child: Row(
+                child: Container(
+                  width: 300,
+                  child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.facebook),
                     const Text('Continue with Facebook'),
                   ],
                 ),
+                )
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
