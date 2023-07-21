@@ -19,12 +19,18 @@ void main() {
             child: Column(
               children: [
             Container(
-              height: 150,
-              width: 150,
+              height: 180,
+              width: 180,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(75),
+                borderRadius: BorderRadius.circular(90),
                 color: Colors.blue[100], 
-              ),), 
+              ),
+              child: Image(
+                  width: 75,
+                  height: 10,
+                  image: NetworkImage('https://www.7krave.com/img/7krave-logo.png'),
+              ),
+              ), 
               SizedBox(height: 50,), 
             TextButton(
               onPressed: () {},
