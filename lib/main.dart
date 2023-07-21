@@ -16,7 +16,8 @@ void main() {
             ),
           ),
           body: Center(
-            child: Column(children: [
+            child: Column(
+              children: [
             Container(
               height: 150,
               width: 150,
@@ -24,6 +25,7 @@ void main() {
                 borderRadius: BorderRadius.circular(75),
                 color: Colors.blue[100], 
               ),), 
+              SizedBox(height: 50,), 
             TextButton(
               onPressed: () {},
               child: Container(
