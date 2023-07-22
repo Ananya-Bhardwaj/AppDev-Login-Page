@@ -4,7 +4,7 @@ void main() {
   runApp(MaterialApp(
       home: Scaffold(
           appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(80.0),
+            preferredSize: const Size.fromHeight(50),
             child: FilledButton(
               onPressed: () {},
               child: const Text('Skip'),
@@ -16,7 +16,18 @@ void main() {
             ),
           ),
           body: Center(
-            child: Column(children: [
+            child: Column(
+              children: [
+            Container(
+              height: 180,
+              width: 180,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(90),
+                color: Colors.blue[50], 
+              ),
+              child: Image.network('https://www.7krave.com/img/7krave-logo.png', fit: BoxFit.fitHeight,),
+              ), 
+              SizedBox(height: 50,), 
             TextButton(
               onPressed: () {},
               child: Container(
@@ -27,6 +38,7 @@ void main() {
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green[600],
+                fixedSize: Size(300, 20)
               ),
             ),
             TextButton(
@@ -80,13 +92,17 @@ void main() {
                 ),
                 )
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text("Don't have an account?"), 
-                  const Text('Sign Up'),
-                ],
-              )
+              Padding(
+                padding: EdgeInsets.only(top: 10), 
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Don't have an account?"), 
+                    const Text(' Sign Up', 
+                      style: TextStyle(color: Colors.green),),
+                  ],
+              ),
+                )
             ],
           )
           ),
