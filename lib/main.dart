@@ -23,13 +23,9 @@ void main() {
               width: 180,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(90),
-                color: Colors.blue[100], 
+                color: Colors.blue[50], 
               ),
-              child: Image(
-                  width: 75,
-                  height: 10,
-                  image: NetworkImage('https://www.7krave.com/img/7krave-logo.png'),
-              ),
+              child: Image.network('https://www.7krave.com/img/7krave-logo.png', fit: BoxFit.fitHeight,),
               ), 
               SizedBox(height: 50,), 
             TextButton(
@@ -95,13 +91,17 @@ void main() {
                 ),
                 )
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text("Don't have an account?"), 
-                  const Text('Sign Up'),
-                ],
-              )
+              Padding(
+                padding: EdgeInsets.only(top: 10), 
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Don't have an account?"), 
+                    const Text(' Sign Up', 
+                      style: TextStyle(color: Colors.green),),
+                  ],
+              ),
+                )
             ],
           )
           ),
