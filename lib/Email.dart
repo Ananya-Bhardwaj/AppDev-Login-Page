@@ -10,6 +10,28 @@ class EmailPage extends StatefulWidget {
 class _MyWidgetState extends State<EmailPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Column(children: [
+          Container(), 
+          TextField(), 
+          TextField(), 
+          Row(), 
+          TextButton(onPressed: (){}, 
+          child: Text('Sign In')),
+          Row(
+            children: [
+              Text(''), 
+              Text(''), 
+            ],
+          ),
+          Expanded(child: Container()), 
+          Text(''), 
+          TextButton(onPressed: (){}, child: Text('Privacy Policy'))
+        ],
+        ),
+      ),
+    );
   }
 }
