@@ -115,18 +115,21 @@ class _MyWidgetState extends State<EmailPage> {
               ],
             ),
             Expanded(child: Container()),
-            RichText(
+            Container(
+              padding: EdgeInsets.all(20),
+              child: RichText(
                 text: TextSpan(
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.black),
                     children: [
                   TextSpan(
                       text:
-                          'By clickint "Sign In" above, you agree to 7krave '),
+                          'By clicking "Sign In" above, you agree to 7krave '),
                   TextSpan(
                       text: 'Terms & Conditions and Privacy Policy',
                       style: TextStyle(color: Colors.amber[100])),
                 ])),
+            ) ,
         ],
         ),
         )
