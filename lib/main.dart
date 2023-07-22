@@ -1,29 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:footer/footer.dart';
+import 'package:footer/footer_view.dart';
 
 void main() {
   runApp(MaterialApp(
       home: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(50),
-            child: FilledButton(
+          appBar: AppBar(
+            backgroundColor: Colors.grey[50],
+            elevation: 0,
+            actions: [
+              Padding(padding: EdgeInsets.only(right: 20),
+              child: FilledButton(
               onPressed: () {},
-              child: const Text('Skip'),
+              child: const Text('Skip', 
+              style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+              ),),
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all<Color?>(Colors.amber[200]),
-                alignment: const Alignment(1, 1),
+                    MaterialStateProperty.all<Color?>(Colors.orange[50]),
               ),
             ),
+            )
+            ],
           ),
           body: Center(
-            child: Column(
+              child: Column(
               children: [
             Container(
               height: 180,
               width: 180,
+              padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(90),
-                color: Colors.blue[50], 
+                color: Color.fromARGB(255, 217, 230, 239), 
               ),
               child: Image.network('https://www.7krave.com/img/7krave-logo.png', fit: BoxFit.fitHeight,),
               ), 
@@ -38,9 +48,10 @@ void main() {
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green[600],
-                fixedSize: Size(300, 20)
+                fixedSize: Size(300, 50)
               ),
             ),
+            SizedBox(height: 20,),
             TextButton(
               onPressed: () {},
               child: Container(
@@ -56,13 +67,16 @@ void main() {
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.black,
+                fixedSize: Size(300, 50)
               ),
             ),
+            SizedBox(height: 20,),
             TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFF4285F4),
+                  fixedSize: Size(300, 50)
                 ),
               child: Container(
                 width: 300,
@@ -75,11 +89,13 @@ void main() {
                 ),
               )
             ),
+            SizedBox(height: 20,),
               TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFF1877F2),
+                  fixedSize: Size(300, 50)
                 ),
                 child: Container(
                   width: 300,
@@ -93,20 +109,32 @@ void main() {
                 )
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10), 
+                padding: EdgeInsets.only(top: 20), 
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account?"), 
+                    const Text("Don't have an account?", 
+                    style: TextStyle(fontWeight: FontWeight.bold),), 
                     const Text(' Sign Up', 
-                      style: TextStyle(color: Colors.green),),
+                      style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),),
                   ],
               ),
-                )
+              ), 
             ],
-          )
+          ),
+        ),
+        bottomNavigationBar: Container(
+          padding: EdgeInsets.all(20),
+          child: RichText(
+                text: TextSpan(
+                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                  children: [
+                    TextSpan(text: 'By click "Continue with Email/Apple/Google/Facebook" above, you agree to 7krave '),
+                    TextSpan(text: 'Terms and Conditions & Privacy Policy', style: TextStyle(color: Colors.yellow[400])), 
+                    ])
+              )
+          ),
           ),
           )
-      )
     );
 }
