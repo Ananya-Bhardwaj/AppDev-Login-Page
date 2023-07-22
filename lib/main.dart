@@ -5,17 +5,24 @@ import 'package:footer/footer_view.dart';
 void main() {
   runApp(MaterialApp(
       home: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(50),
-            child: FilledButton(
+          appBar: AppBar(
+            backgroundColor: Colors.grey[50],
+            elevation: 0,
+            actions: [
+              Padding(padding: EdgeInsets.only(right: 20),
+              child: FilledButton(
               onPressed: () {},
-              child: const Text('Skip'),
+              child: const Text('Skip', 
+              style: TextStyle(
+                color: Color.fromRGBO(0, 0, 0, 1),
+              ),),
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all<Color?>(Colors.amber[200]),
-                alignment: const Alignment(1, 1),
+                    MaterialStateProperty.all<Color?>(Colors.orange[50]),
               ),
             ),
+            )
+            ],
           ),
           body: Center(
               child: Column(
@@ -26,7 +33,7 @@ void main() {
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(90),
-                color: Colors.blue[50], 
+                color: Color.fromARGB(255, 217, 230, 239), 
               ),
               child: Image.network('https://www.7krave.com/img/7krave-logo.png', fit: BoxFit.fitHeight,),
               ), 
