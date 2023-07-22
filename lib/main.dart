@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:footer/footer.dart';
+import 'package:footer/footer_view.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -111,17 +113,20 @@ void main() {
                   ],
               ),
               ), 
-              RichText(
+            ],
+          ),
+        ),
+        bottomNavigationBar: Container(
+          padding: EdgeInsets.all(20),
+          child: RichText(
                 text: TextSpan(
                   style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                   children: [
-                    TextSpan(text: 'By click "Continue with Email/Apple/Google/Facebook" above, you agree to 7krave'),
-                    TextSpan(text: 'Terms and Conditions & Privacy Policy', style: TextStyle(color: Colors.yellow)), 
+                    TextSpan(text: 'By click "Continue with Email/Apple/Google/Facebook" above, you agree to 7krave '),
+                    TextSpan(text: 'Terms and Conditions & Privacy Policy', style: TextStyle(color: Colors.yellow[400])), 
                     ])
               )
-            ],
           ),
-        )
           ),
           )
     );
