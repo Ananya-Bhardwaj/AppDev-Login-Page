@@ -94,15 +94,15 @@ class _HomeState extends State<HomePage> {
                   onPressed: () {},
                   style: TextButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: Color(0xFF4285F4),
+                      backgroundColor: Color(0xFF5865F2),
                       fixedSize: Size(300, 50)),
                   child: Container(
                     width: 300,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.g_translate_rounded),
-                        const Text('Continue with Google'),
+                        const Icon(Icons.discord),
+                        const Text('Continue with Discord'),
                       ],
                     ),
                   )),
@@ -157,7 +157,7 @@ class _HomeState extends State<HomePage> {
                           'By click "Continue with Email/Apple/Google/Facebook" above, you agree to 7krave '),
                   TextSpan(
                       text: 'Terms and Conditions & Privacy Policy',
-                      style: TextStyle(color: Colors.yellow[400])),
+                      style: TextStyle(color: Colors.amber[100])),
                 ]))),
       ),
     );
