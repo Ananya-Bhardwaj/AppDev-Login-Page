@@ -38,6 +38,7 @@ void main() {
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green[600],
+                fixedSize: Size(300, 20)
               ),
             ),
             TextButton(
