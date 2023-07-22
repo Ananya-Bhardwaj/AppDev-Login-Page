@@ -16,11 +16,12 @@ void main() {
             ),
           ),
           body: Center(
-            child: Column(
+              child: Column(
               children: [
             Container(
               height: 180,
               width: 180,
+              padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(90),
                 color: Colors.blue[50], 
@@ -38,9 +39,10 @@ void main() {
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green[600],
-                fixedSize: Size(300, 20)
+                fixedSize: Size(300, 50)
               ),
             ),
+            SizedBox(height: 20,),
             TextButton(
               onPressed: () {},
               child: Container(
@@ -56,13 +58,16 @@ void main() {
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.black,
+                fixedSize: Size(300, 50)
               ),
             ),
+            SizedBox(height: 20,),
             TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFF4285F4),
+                  fixedSize: Size(300, 50)
                 ),
               child: Container(
                 width: 300,
@@ -75,11 +80,13 @@ void main() {
                 ),
               )
             ),
+            SizedBox(height: 20,),
               TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Color(0xFF1877F2),
+                  fixedSize: Size(300, 50)
                 ),
                 child: Container(
                   width: 300,
@@ -93,20 +100,29 @@ void main() {
                 )
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10), 
+                padding: EdgeInsets.only(top: 20), 
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account?"), 
+                    const Text("Don't have an account?", 
+                    style: TextStyle(fontWeight: FontWeight.bold),), 
                     const Text(' Sign Up', 
-                      style: TextStyle(color: Colors.green),),
+                      style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),),
                   ],
               ),
-                )
+              ), 
+              RichText(
+                text: TextSpan(
+                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                  children: [
+                    TextSpan(text: 'By click "Continue with Email/Apple/Google/Facebook" above, you agree to 7krave'),
+                    TextSpan(text: 'Terms and Conditions & Privacy Policy', style: TextStyle(color: Colors.yellow)), 
+                    ])
+              )
             ],
-          )
+          ),
+        )
           ),
           )
-      )
     );
 }
