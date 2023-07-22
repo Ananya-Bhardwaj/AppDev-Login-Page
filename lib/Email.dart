@@ -51,7 +51,7 @@ class _MyWidgetState extends State<EmailPage> {
             ),
             SizedBox(height: 30,), 
             SizedBox(
-              width: 350,
+              width: 300,
               child: const TextField(
               decoration: InputDecoration(
                 labelText: 'Enter your email',
@@ -63,7 +63,7 @@ class _MyWidgetState extends State<EmailPage> {
             ), 
             SizedBox(height: 20,), 
             SizedBox(
-              width: 350,
+              width: 300,
               child: const TextField(
               obscureText: true,
               decoration: InputDecoration(
@@ -99,7 +99,7 @@ class _MyWidgetState extends State<EmailPage> {
               style: TextStyle(color: Colors.white),),
               style: TextButton.styleFrom(
                 backgroundColor: Colors.green[600], 
-                fixedSize: Size(350, 60), 
+                fixedSize: Size(300, 60), 
               ),
               ),
               SizedBox(height: 20,), 
@@ -127,7 +127,6 @@ class _MyWidgetState extends State<EmailPage> {
                       text: 'Terms & Conditions and Privacy Policy',
                       style: TextStyle(color: Colors.amber[100])),
                 ])),
-            Text('By clicking "Sign In" above, you agree to 7krave'),
         ],
         ),
         )
