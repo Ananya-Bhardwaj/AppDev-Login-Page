@@ -19,7 +19,11 @@ void main() {
             child: Column(children: [
             TextButton(
               onPressed: () {},
-              child: const Text('Continue with Email'),
+              child: Container(
+                width: 300,
+                child: const Text('Continue with Email'), 
+                alignment: Alignment.center,
+              ),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.green[600],
@@ -27,48 +31,64 @@ void main() {
             ),
             TextButton(
               onPressed: () {},
-              child: Row(
+              child: Container(
+                width: 300,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.apple),
                   const Text('Continue with Apple'),
                 ],
               ),
+              ),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.black,
               ),
             ),
             TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: Colors.red,
+                  backgroundColor: Color(0xFF4285F4),
                 ),
               child: Container(
-                width: 100,
+                width: 300,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.g_translate_rounded),
+                    const Icon(Icons.g_translate_rounded),
                     const Text('Continue with Google'),
                   ],
                 ),
-              ),
+              )
             ),
               TextButton(
                 onPressed: () {},
-                child: Row(
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Color(0xFF1877F2),
+                ),
+                child: Container(
+                  width: 300,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.facebook),
                     const Text('Continue with Facebook'),
                   ],
                 ),
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
-                  backgroundColor: Colors.red,
-                ),
+                )
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account?"), 
+                  const Text('Sign Up'),
+                ],
+              )
             ],
-        )
+          )
           ),
           )
       )
