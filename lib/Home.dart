@@ -54,7 +54,9 @@ class _HomeState extends State<HomePage> {
                 height: 50,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'Email'); 
+                },
                 child: Container(
                   width: 300,
                   child: const Text('Continue with Email'),
