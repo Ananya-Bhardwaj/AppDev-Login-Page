@@ -7,4 +7,5 @@
 
 ## Features
 * The email page is linked to the home page via the 'Continue with Email' button
-* On pressing the back button, the color around it changes 
+* On pressing the back button, the color around it changes
+* On signing in, the email and password entered is displayed on the new page
