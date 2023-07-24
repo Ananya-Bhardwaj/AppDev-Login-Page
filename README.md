@@ -9,3 +9,4 @@
 * The email page is linked to the home page via the 'Continue with Email' button
 * On pressing the back button, the color around it changes
 * On signing in, the email and password entered is displayed on the new page
+* Once signed in, the user cannot go from new page back to the sign up page
