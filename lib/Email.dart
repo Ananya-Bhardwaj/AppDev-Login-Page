@@ -4,15 +4,15 @@ class EmailPage extends StatefulWidget {
   const EmailPage({super.key});
   static var email = "";
   static var password = "";
-  static const val = "";
   @override
   State<EmailPage> createState() => _MyWidgetState();
 }
 
-Icon eye = Icon(Icons.visibility_off_outlined);
+// Icon eye = Icon(Icons.visibility_off_outlined);
 bool isChecked = false;
 
 class _MyWidgetState extends State<EmailPage> {
+  var eye = Icons.visibility_off_outlined; 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -83,7 +83,7 @@ class _MyWidgetState extends State<EmailPage> {
                       border: InputBorder.none,
                       filled: true,
                       fillColor: Color.fromARGB(24, 166, 198, 252),
-                      suffixIcon: Icon(Icons.visibility_off),
+                      suffixIcon: Icon((eye==Icons.visibility_off_outlined)?eye:Icons.visibility_outlined),
                     ),
                   ),
                 ),
@@ -110,7 +110,8 @@ class _MyWidgetState extends State<EmailPage> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamedAndRemoveUntil(context, 'New', (route) => false); 
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, 'New', (route) => false);
                   },
                   child: Text(
                     'Sign In',
